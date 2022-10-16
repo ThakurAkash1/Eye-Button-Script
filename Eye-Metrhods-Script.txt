@@ -1,0 +1,80 @@
+<i class="bi bi-eye-slash fa-2x col-md-1" id="togglePassword"></i>
+			     <script>
+                                    function toggleNew(){
+                                        const togglePassword = document.querySelector('#togglePassword');
+                                        const password = document.querySelector('#password-new');
+                                        togglePassword.addEventListener('click', () => {
+                                            // Toggle the type attribute using getAttribure() method
+                                            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                                            password.setAttribute('type', type);
+                                            // Toggle the eye and bi-eye icon
+                                            togglePassword.classList.toggle('bi-eye');
+                                        });
+                                    }
+                                </script>
+
+
+------------------------------------------------------------------------------------------------------------------------------------ one Method
+<i class="bi bi-eye-slash fa-2x col-md-1" id="toggleConfirmPassword"></i>
+				<script>
+                                    function toggleCnf(){
+                                        const togglePassword = document.querySelector('#toggleConfirmPassword');
+                                        const password = document.querySelector('#password-confirm');
+                                        togglePassword.addEventListener('click', () => {
+                                            // Toggle the type attribute using getAttribure() method
+                                            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                                            password.setAttribute('type', type);
+                                            // Toggle the eye and bi-eye icon
+                                            togglePassword.classList.toggle('bi-eye');
+                                        });
+                                    }
+                                </script>
+========================================================================================================================================
+ <i class="fa hideIcon col-md-1" id="togglePassword"></i>
+				 <script type="text/javascript">
+                                    passIcon = document.querySelector('#password-new'),togglePassword = document.querySelector('#togglePassword');
+                                    if(togglePassword){
+                                    togglePassword.addEventListener('click', function (e) {
+                                    // toggle the type attribute
+                                    if(passIcon.getAttribute('type') === 'password'){
+                                        var type = 'input';
+                                        this.classList.remove("hideIcon");
+                                        this.classList.add("eye");
+                                    } 
+                                    else if(passIcon.getAttribute('type') === 'input'){
+                                        var type = 'password';
+                                        this.classList.remove("eye");
+                                        this.classList.add("hideIcon");
+                                    }
+                                    passIcon.setAttribute('type', type);
+                                    // toggle the eye / eye slash icon
+                                    //this.classList.toggle('bi-eye');
+                                    
+                                    })}; 
+                                </script>
+------------------------------------------------------------------------------------------------------------------------------------------------ Second method
+<i class="fa hideIcon col-md-1" id="toggleConfirmPassword"></i>
+				 <script>
+                                    passIcon1 = document.querySelector('#password-confirm'),togglePassword = document.querySelector('#toggleConfirmPassword');
+                                    if(togglePassword){
+                                    togglePassword.addEventListener('click', function (e) {
+                                    // toggle the type attribute
+                                    if(passIcon1.getAttribute('type') === 'password'){
+                                        var type = 'input';
+                                        this.classList.remove("hideIcon");
+                                        this.classList.add("eye");
+                                    } 
+                                    else if(passIcon1.getAttribute('type') === 'input'){
+                                        var type = 'password';
+                                        this.classList.remove("eye");
+                                        this.classList.add("hideIcon");
+                                    }
+                                    passIcon1.setAttribute('type', type);
+                                    // toggle the eye / eye slash icon
+                                    //this.classList.toggle('bi-eye');
+                                    
+                                    })}; 
+                                    $(function () {
+                                $('[data-toggle="tooltip"]').tooltip()
+                                })  
+                                </script>
